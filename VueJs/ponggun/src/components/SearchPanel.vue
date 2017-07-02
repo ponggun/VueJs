@@ -5,7 +5,7 @@
        <h4>Contacts</h4>
      </a>
      <input type="text" placeholder="Search...">
-     <div class="ui button">Search</div>
+     <div class="ui button" @click="onClickedAdd">Search</div>
    </div>
  </div>
 </template>
@@ -17,6 +17,11 @@ export default {
  data () {
    return {
      msg: 'Welcome to Search Panel'
+   }
+ },
+ methods:{
+   onClickedAdd(){
+    this.$emit('onClickedAdd')
    }
  }
 }
